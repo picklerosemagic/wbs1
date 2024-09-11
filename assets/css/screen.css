@@ -561,7 +561,6 @@ button {
 .menu-animate {
     position: relative;
     z-index: 10;
-    min-height: 110%;
     -webkit-transition: -webkit-transform 0.5s ease;
             transition: transform 0.5s ease;
 }
