@@ -1,0 +1,375 @@
+---
+layout: default
+class: 'home-template'
+current: home
+show_boxes: true
+cover1: ./assets/images/cover1.jpg
+cover1_title: Embracing for the metamorphosis of the future.
+cover1_subtitle: Transformation is upon us.
+cover1fr_title: Bonjour!
+cover1fr_subtitle: Je parle mal le français donc j'utilise des outils de traduction en ligne.
+cover2: ./assets/images/cover2.jpg
+cover2_title: Transcending boundaries.
+cover2_subtitle: Aiming for a higher standard.
+cover2fr_title: Transcender les frontières.
+cover2fr_subtitle: Viser un niveau plus élevé.
+cover3: ./assets/images/cover3.jpg
+cover3_title: A new ecology.
+cover3_subtitle: A new frame of mind.
+cover3fr_title: Une nouvelle écologie.
+cover3fr_subtitle: Un nouvel état d'esprit.
+cover4: ./assets/images/cover4.jpg
+cover4_title: Big things come in small packages.
+cover4fr_title: Les grandes choses viennent dans de petits paquets.
+cover5: ./assets/images/cover5.jpg
+cover6: ./assets/images/cover6.jpg
+cover6_title: Tell stories with pictures.
+cover6_subtitle: Supports up to 8 frames.
+cover6fr_title: Racontez des histoires avec des images.
+cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
+---
+
+{% if page.cover1 %}
+	<header class="main-header header1"
+			style="background-image: url({{ page.cover1 | relative_url }})">
+			
+		<nav class="main-nav overlay clearfix menu-animate">
+			{% include logo.html %}
+			
+			<a class="menu-button icon-menu" href="#">Menu</a>
+			
+			<!-- Language separator -->
+			{% include language.html %}
+
+		</nav>
+		
+		<!-- The blog navigation links -->
+		{% include navigation.html %}
+				
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover1_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover1_title }}</h1>
+						{% if page.cover1_subtitle %}
+							<h2 class="page-description">{{ page.cover1_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover1fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover1fr_title }}</h1>
+						{% if page.cover1fr_subtitle %}
+							<h2 class="page-description">{{ page.cover1fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+		
+	</header>
+{% endif %}
+
+{% if page.cover2 %}
+	<header class="main-header header2"
+			style="background-image: url({{ page.cover2 | relative_url }})">
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover2_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover2_title }}</h1>
+						{% if page.cover2_subtitle %}
+							<h2 class="page-description">{{ page.cover2_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover2fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover2fr_title }}</h1>
+						{% if page.cover2fr_subtitle %}
+							<h2 class="page-description">{{ page.cover2fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+		
+	</header>
+{% endif %}
+
+{% if page.cover3 %}
+	<header class="main-header header3"
+			style="background-image: url({{ page.cover3 | relative_url }})">
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover3_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover3_title }}</h1>
+						{% if page.cover3_subtitle %}
+							<h2 class="page-description">{{ page.cover3_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover3fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover3fr_title }}</h1>
+						{% if page.cover3fr_subtitle %}
+							<h2 class="page-description">{{ page.cover3fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+		
+	</header>
+{% endif %}
+
+{% if page.cover4 %}
+	<header class="main-header header4"
+			style="background-image: url({{ page.cover4 | relative_url }})">
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover4_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover4_title }}</h1>
+						{% if page.cover4_subtitle %}
+							<h2 class="page-description">{{ page.cover4_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover4fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover4fr_title }}</h1>
+						{% if page.cover4fr_subtitle %}
+							<h2 class="page-description">{{ page.cover4fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+		
+	</header>
+{% endif %}
+
+{% if page.cover5 %}
+	<header class="main-header header5"
+			style="background-image: url({{ page.cover5 | relative_url }})">
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover5_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover5_title }}</h1>
+						{% if page.cover5_subtitle %}
+							<h2 class="page-description">{{ page.cover5_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover5fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover5fr_title }}</h1>
+						{% if page.cover5fr_subtitle %}
+							<h2 class="page-description">{{ page.cover5fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+
+	</header>
+{% endif %}
+
+{% if page.cover6 %}
+	<header class="main-header header6"
+			style="background-image: url({{ page.cover6 | relative_url }})">
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover6_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover6_title }}</h1>
+						{% if page.cover6_subtitle %}
+							<h2 class="page-description">{{ page.cover6_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover6fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover6fr_title }}</h1>
+						{% if page.cover6fr_subtitle %}
+							<h2 class="page-description">{{ page.cover6fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+
+	</header>
+{% endif %}
+
+{% if page.cover7 %}
+	<header class="main-header header7"
+			style="background-image: url({{ page.cover7 | relative_url }})">
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover7_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover7_title }}</h1>
+						{% if page.cover7_subtitle %}
+							<h2 class="page-description">{{ page.cover7_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover7fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover7fr_title }}</h1>
+						{% if page.cover7fr_subtitle %}
+							<h2 class="page-description">{{ page.cover7fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+
+	</header>
+{% endif %}
+
+{% if page.cover8 %}
+	<header class="main-header header8"
+			style="background-image: url({{ page.cover8 | relative_url }})">
+			
+		{% if site.data.l10n.lang contains 'en' %}
+			{% if page.cover8_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover8_title }}</h1>
+						{% if page.cover8_subtitle %}
+							<h2 class="page-description">{{ page.cover8_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if page.cover8fr_title %}
+				<div class="vertical">
+				
+					{% if page.show_boxes %}
+						<div class="main-header-content inner box menu-animate">
+					{% else %}
+						<div class="main-header-content inner menu-animate">
+					{% endif %}
+						<h1 class="page-title">{{ page.cover8fr_title }}</h1>
+						{% if page.cover8fr_subtitle %}
+							<h2 class="page-description">{{ page.cover8fr_subtitle }}</h2>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		{% endif %}
+		
+	</header>
+{% endif %}
+
+<!-- end extra headers -->
+
+<!-- The main content area on the homepage -->
+<main id="content" class="content" role="main">
+
+    <!-- The tag below includes the post loop - partials/loop.hbs -->
+    {% include loop.html %}
+
+</main>

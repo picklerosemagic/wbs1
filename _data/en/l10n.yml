@@ -1,0 +1,28 @@
+lang: en
+
+title: Organism
+
+no_translation: Notice - This article is currently unavailable in English.
+
+tags: Tags
+top: Top
+
+post_pagination_counter: Page [CURRENT_PAGE] of [TOTAL_PAGES]
+
+post_next_suggestion: You may also like
+post_previous_suggestion: Read Next
+
+
+menu: Menu
+menu_close: Close
+menu_navigation: Navigation
+menu_home: Home
+menu_about: About
+menu_all_posts: All Posts
+menu_tags: Tags
+menu_tags_test: Test
+
+tags_all_desc: All blog posts.
+tags_test_desc: Experimental tag used for demonstrating tag functionality.
+
+subscribe: Subscribe

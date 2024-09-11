@@ -1,0 +1,14 @@
+<div class="lang-selector">
+	{% for lang in site.languages %}
+		{% if lang == site.default_lang %}
+	<a href="https://{{ site.url }}{{ page.url}}">{{ lang }}</a>
+		{% else %}
+	<a href="https://{{ site.url }}/{{ lang }}{{ page.url}}">{{ lang }}</a>
+		{% endif %}
+
+	{% if site.languages.last != lang %}
+	 | 
+	{% endif %}
+
+	{% endfor %}
+</div>

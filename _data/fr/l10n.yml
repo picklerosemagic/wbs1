@@ -1,0 +1,27 @@
+lang: fr
+
+title: Organisme
+
+no_translation: Attention - Cet article n'est actuellement pas disponible en français.
+
+tags: Tags_fr
+top: Top_fr
+
+post_pagination_counter: Page_fr [CURRENT_PAGE] of [TOTAL_PAGES]
+
+post_next_suggestion: Vous aimerez aussi
+post_previous_suggestion: aussi
+
+menu: Menu_fr
+menu_close: Close_fr
+menu_navigation: Navigation_fr
+menu_home: Home_fr
+menu_about: About_fr
+menu_all_posts: All Posts_fr
+menu_tags: Tags_fr
+menu_tags_test: Test_fr
+
+tags_all_desc: Tous les articles de blog.
+tags_test_desc: Balise expérimentale utilisée pour démontrer la fonctionnalité de la balise.
+
+subscribe: Subscribe_fr

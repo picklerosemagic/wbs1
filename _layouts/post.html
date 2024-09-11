@@ -1,0 +1,114 @@
+---
+layout: default
+class: 'post-template'
+---
+<!-- default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover  | relative_url }}) {% else %}no-cover{% endif %}">
+		<div class="main-nav overlay ">
+			<nav class="clearfix menu-animate">
+				{% include logo.html %}
+			
+				<button class="menu-button icon-menu" href="#">Menu</button>
+
+				<!-- Language separator -->
+				{% include language.html %}
+
+			</nav>
+		</div>
+		
+		<!-- The blog navigation links -->
+		{% include navigation.html %}
+		
+    <div class="vertical">
+		{% if page.show_boxes %}
+			<div class="main-header-content inner box menu-animate">
+		{% else %}
+			<div class="main-header-content inner menu-animate">
+		{% endif %}
+            <h1 class="post-title">{{ page.title }}</h1>
+            <h2 class="page-description">
+            {% if tag_description %}
+                {{ tag_description }}
+            {% endif %}
+            </h2>
+        </div>
+    </div>
+		
+</header>
+
+<main class="content menu-animate" role="main">
+
+    <article class="{{ page.subclass }}">
+
+        <header class="post-header">
+            
+            <section class="post-meta">
+
+            <time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">{{ page.date | date_to_string }}</time>
+			<div class="post-tags">
+                <!-- [[tags prefix=" on "]] -->
+                {% if page.tags.size > 0 %}
+                {{ site.data.l10n.tags }}:
+                {% for tag in page.tags %}
+					{% if tag == 'post' %}
+					
+					{% else %}
+						<a href='{{ tag | prepend: "tag/" | relative_url }}'>{{ tag | capitalize }} </a>
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+			</div>
+            </section>
+        </header>
+
+        <section class="post-content">
+
+			{% include no_translation.html %}
+
+            {{ content }}
+
+        </section>
+		
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->{{ post.url | remove: '/' }}
+    {% if page.next %}
+        <a class="read-next-story {% if page.next.cover %}" style="background-image: url({{ page.next.cover | relative_url }}){% else %}no-cover{% endif %}" href="{{ page.next.url | relative_url }}">
+            <section class="post">
+				<div class="read-next-story-before">
+					{{ site.data.l10n.post_next_suggestion }}
+				</div>
+			
+                <h2>{{ page.next.title }}</h2>
+                <p>{{ page.next.content | strip_html | truncatewords:15 }}</p>
+            </section>
+        </a>
+    {% endif %}
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    {% if page.previous %}
+        <a class="read-next-story prev {% if page.previous.cover %}" style="background-image: url({{ page.previous.cover | relative_url }}){% else %}no-cover{% endif %}" href="{{ page.previous.url | relative_url }}">
+            <section class="post">
+				<div class="read-next-story-before">
+					{{ site.data.l10n.post_previous_suggestion }}
+				</div>
+				
+                <h2>{{ page.previous.title }}</h2>
+                <p>{{ page.previous.content | strip_html | truncatewords:15 }}</p>
+            </section>
+        </a>
+    {% endif %}
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
