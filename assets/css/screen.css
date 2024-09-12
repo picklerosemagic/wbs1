@@ -2293,7 +2293,7 @@ footer {
 	}	
 	
 	.main-nav.overlay {
-		height: 165px;
+		height: 155px;
 		background: linear-gradient(to bottom, rgb(0, 0, 0, 1.0) 0%, rgb(0, 0, 0, 1.0) 50%, rgba(0,0,0,0.0) 100%);
 	}
 	
