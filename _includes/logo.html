@@ -1,6 +1,6 @@
 
 {% if site.data.l10n.lang contains 'fr' %}
-	<a class="blog-logo" href="https://{{ site.url }}"><img class="blog-logo-image" src="https://{{ site.url }}/assets/images/home.png" alt-text="Home Button"/><div class="blog-logo-text">{{ site.data.l10n.menu_home }}</div></a>
+	<a id="home-button" class="blog-logo" href="https://{{ site.url }}"><img class="blog-logo-image" src="https://{{ site.url }}/assets/images/home.png" alt-text="Home Button"/><div class="blog-logo-text">{{ site.data.l10n.menu_home }}</div></a>
 {% else %}
-	<a class="blog-logo" href="https://{{ site.url }}/{{site.data.l10n.lang}}"><img class="blog-logo-image" src="https://{{ site.url }}/assets/images/home.png" alt-text="Home Button"/><div class="blog-logo-text">{{ site.data.l10n.menu_home }}</div></a>
+	<a id="home-button" class="blog-logo" href="https://{{ site.url }}/{{site.data.l10n.lang}}"><img class="blog-logo-image" src="https://{{ site.url }}/assets/images/home.png" alt-text="Home Button"/><div class="blog-logo-text">{{ site.data.l10n.menu_home }}</div></a>
 {% endif %} 

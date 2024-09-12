@@ -21,6 +21,8 @@
 				<li class="nav-test {% if page.url contains 'test' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/tag/test">{{ site.data.l10n.menu_tags_test }}</a></li>
 			</ul>
 		</li>
+		<li class="nav-counter {% if page.url contains 'test' %} nav-current{% endif %} nav-subelement" role="presentation">
+		    <a class="subscribe-button icon-feed" href="{{ site.baseurl }}/feed.xml">{{ site.data.l10n.subscribe }}</a>
+		</li>
     </ul>
-    <a class="subscribe-button icon-feed" href="{{ site.baseurl }}/feed.xml">{{ site.data.l10n.subscribe }}</a>
 </div>

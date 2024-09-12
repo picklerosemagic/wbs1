@@ -18,19 +18,16 @@
 
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="{{ 'assets/css/screen.css' | relative_url }}" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
     <link rel="stylesheet" type="text/css" href="{{ 'assets/css/syntax.css' | relative_url }}" />
-
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
 
     <!-- Ghost outputs important style and meta data with this tag -->
     {% include head.html %}
 
 </head>
 <body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %} nav-closed">
-
+	
+	<script>0</script>
     <div class="site-wrapper">
 
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
@@ -39,7 +36,8 @@
     </div>
 
 	<footer>
-		<a href="{{ absolute_url }}"> {{ site.data.l10n.top }}</a>
+		<a href="#home-button"> {{ site.data.l10n.top }}</a> | 
+		<a href="{{ site.baseurl }}/about">{{ site.data.l10n.menu_about }}</a>
 	</footer>
 	
     <!-- highlight.js -->
