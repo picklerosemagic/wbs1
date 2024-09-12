@@ -32,7 +32,11 @@
 					{% if tag == 'post' %}
 					
 					{% else %}
-						<a href='{{ tag | prepend: "tag/" | relative_url }}'>{{ tag | capitalize }}</a>
+						{% if site.data.l10n.lang contains site.default_lang %}
+							<a href='{{ tag | prepend: "tag/" | relative_url }}'>{{ tag | capitalize }}</a>
+						{% else %}
+							<a href='{{ tag | prepend: "/tag/" | prepend: site.data.l10n.lang | relative_url }}'>{{ tag | capitalize }}</a>
+						{% endif %}
 					{% endif %}
                 {% endfor %}
             {% endif %}
