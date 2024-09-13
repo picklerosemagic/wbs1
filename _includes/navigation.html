@@ -8,7 +8,7 @@
 		<li class="nav-counter {% if page.url contains 'test' %} nav-current{% endif %} nav-subelement" role="presentation" >{{ site.data.l10n.menu_navigation }}
 		<ul>
 			{% if site.data.l10n.lang contains site.default_lang %}
-				<li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">{{ site.data.l10n.menu_home }}</a></li>
+				<li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="https://{{ site.url }}">{{ site.data.l10n.menu_home }}</a></li>
 			{% else %}
 				<li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="https://{{ site.url }}/{{site.data.l10n.lang}}">{{ site.data.l10n.menu_home }}</a></li>
 			{% endif %} 
