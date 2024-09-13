@@ -2215,7 +2215,8 @@ footer {
     }
 
     .post-head.main-header {
-        height: 30vh;
+		height: 50vh;
+		min-height: 500px;
     }
 
     .tag-head.main-header,
@@ -2293,7 +2294,7 @@ footer {
 	}	
 	
 	.main-nav.overlay {
-		height: 135px;
+		height: 155px;
 		background: linear-gradient(to bottom, rgb(0, 0, 0, 1.0) 0%, rgb(0, 0, 0, 1.0) 50%, rgba(0,0,0,0.0) 100%);
 	}
 	
